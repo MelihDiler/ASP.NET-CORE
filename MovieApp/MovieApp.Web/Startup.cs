@@ -34,6 +34,11 @@ namespace MovieApp.Web
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
+
+                endpoints.MapGet("/movies", async context =>
+                {
+                    await context.Response.WriteAsync("Movies");
+                });
             });
         }
     }
